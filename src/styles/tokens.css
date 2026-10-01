@@ -1,0 +1,126 @@
+/**
+ * Tokens par défaut de Beedesign.
+ *
+ * Toutes les variables sont préfixées "--bd-" pour ne jamais entrer en
+ * collision avec les variables CSS de l'application qui consomme la
+ * librairie. Elles sont un point de départ que chaque projet est censé
+ * surcharger.
+ *
+ * Pour personnaliser, il suffit de redéfinir tout ou partie de ces
+ * variables après l'import de ce fichier, dans le CSS global du projet :
+ *
+ *   :root {
+ *     --bd-color-primary: #6242f0;
+ *     --bd-color-on-primary: #ffffff;
+ *     --bd-font-title: "Libre Bodoni", serif;
+ *   }
+ *
+ * Mode sombre : ajoutez la classe "dark" ou l'attribut data-theme="dark"
+ * sur <html> (ou n'importe quel parent).
+ */
+:root {
+  /* Marque : violet (principal) et ambre (accent) */
+  --bd-color-primary: #6242f0;
+  --bd-color-primary-hover: #5232dc;
+  --bd-color-primary-edge: #3f24b8; /* arête basse du bouton principal */
+  --bd-color-on-primary: #ffffff; /* texte posé sur --bd-color-primary */
+  --bd-color-primary-dark: #171738; /* encre : textes et contours forts */
+  --bd-color-primary-medium: #a4b0f5;
+  --bd-color-primary-light: #efecfd; /* teinte douce : survols, fonds légers */
+
+  --bd-color-accent: #f6bd60;
+  --bd-color-on-accent: #2b1d03; /* texte posé sur --bd-color-accent */
+  --bd-color-accent-light: #fdf0d5;
+
+  /* Neutres (légèrement teintés de violet pour rester cohérents avec la marque) */
+  --bd-color-bg: #ffffff;
+  --bd-color-surface: #f8f7fe; /* cartes, panneaux */
+  --bd-color-text: #1c1a33;
+  --bd-color-text-muted: #5f5c7a;
+  --bd-color-border: #e2dff2;
+  --bd-color-border-strong: #8f8ab5;
+  --bd-color-focus: #b45309;
+
+  /* Statuts */
+  --bd-color-success: #15803d;
+  --bd-color-error: #b91c1c;
+  --bd-color-warning: #b45309;
+  --bd-color-info: #6242f0;
+
+  /* Typographie */
+  --bd-font-main: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bd-font-title: var(--bd-font-main);
+  --bd-font-size-sm: 0.85rem;
+  --bd-font-size-md: 1rem;
+  --bd-font-size-lg: 1.25rem;
+
+  /* Espacement */
+  --bd-space-sm: 0.5rem;
+  --bd-space-md: 1rem;
+  --bd-space-lg: 2rem;
+
+  /* Forme */
+  --bd-radius-sm: 6px;
+  --bd-radius-md: 12px;
+  --bd-radius-full: 999px;
+
+  /* Élévation */
+  --bd-shadow-1: 0 1px 2px rgba(23, 23, 56, 0.08), 0 1px 3px rgba(23, 23, 56, 0.06);
+  --bd-shadow-2: 0 4px 8px rgba(23, 23, 56, 0.08), 0 2px 4px rgba(23, 23, 56, 0.06);
+  --bd-shadow-3: 0 12px 24px rgba(23, 23, 56, 0.12), 0 4px 8px rgba(23, 23, 56, 0.08);
+  --bd-color-overlay: rgba(23, 23, 56, 0.45);
+
+  /* Superpositions */
+  --bd-z-modal: 1000;
+  --bd-z-alert: 1100;
+
+  /* Mouvement */
+  --bd-transition-fast: 0.15s ease;
+  --bd-transition-base: 0.25s ease;
+}
+
+/* Mode sombre : le violet s'éclaircit pour rester lisible sur fond sombre,
+   le texte posé dessus passe donc de blanc à encre. L'ambre reste identique. */
+.dark,
+[data-theme="dark"] {
+  --bd-color-primary: #9b87f8;
+  --bd-color-primary-hover: #b0a0fa;
+  --bd-color-primary-edge: #5f49c9;
+  --bd-color-on-primary: #171738;
+  --bd-color-primary-dark: #ebe8fd; /* l'encre devient claire */
+  --bd-color-primary-medium: #4b4399;
+  --bd-color-primary-light: #2a2557;
+
+  --bd-color-accent: #f6bd60;
+  --bd-color-on-accent: #2b1d03;
+  --bd-color-accent-light: #3d2f12;
+
+  --bd-color-bg: #121127;
+  --bd-color-surface: #1c1a3a;
+  --bd-color-text: #ecebfa;
+  --bd-color-text-muted: #a9a6cc;
+  --bd-color-border: #2d2a57;
+  --bd-color-border-strong: #5a5694;
+  --bd-color-focus: #f6bd60;
+
+  --bd-color-success: #4ade80;
+  --bd-color-error: #f87171;
+  --bd-color-warning: #f6bd60;
+  --bd-color-info: #9b87f8;
+
+  /* Ombres plus profondes : sur fond sombre, les ombres claires ne se voient pas */
+  --bd-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --bd-shadow-2: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --bd-shadow-3: 0 12px 24px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.35);
+
+  --bd-color-overlay: rgba(0, 0, 0, 0.6);
+}
+
+/* Respecte la préférence système de réduction des animations,
+   partagé par tous les composants de la librairie. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --bd-transition-fast: 0s;
+    --bd-transition-base: 0s;
+  }
+}

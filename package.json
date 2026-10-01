@@ -1,0 +1,61 @@
+{
+  "name": "beedesign",
+  "version": "0.0.1",
+  "description": "Une librairie de composants Vue 3 accessible par défaut, avec un thème entièrement surchargeable via des variables CSS.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Thaïs Labouré",
+  "keywords": [
+    "vue",
+    "vue3",
+    "components",
+    "design-system",
+    "accessibility",
+    "a11y"
+  ],
+  "main": "./dist/beedesign.umd.cjs",
+  "module": "./dist/beedesign.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/beedesign.css",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/beedesign.js",
+      "require": "./dist/beedesign.umd.cjs"
+    },
+    "./style.css": "./dist/beedesign.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^3.5.43"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vitest/coverage-v8": "^5.0.3",
+    "@vue/test-utils": "^2.5.1",
+    "axe-core": "^4.13.0",
+    "jsdom": "^29.1.1",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.6",
+    "vite-plugin-dts": "^5.1.1",
+    "vitepress": "^1.6.4",
+    "vitest": "^5.0.3",
+    "vue": "^3.5.43",
+    "vue-tsc": "^3.3.11"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "prepublishOnly": "npm run build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "vue-tsc -b && vue-tsc --noEmit -p tests/tsconfig.json && vue-tsc --noEmit -p docs/tsconfig.json"
+  }
+}

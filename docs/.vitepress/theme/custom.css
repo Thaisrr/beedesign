@@ -1,0 +1,34 @@
+/* Branche le thème VitePress sur les tokens Beedesign.
+   VitePress ajoute la classe "dark" sur <html>, que tokens.css comprend déjà. */
+:root {
+    --vp-c-brand-1: var(--bd-color-primary);
+    --vp-c-brand-2: var(--bd-color-primary-hover);
+    --vp-c-brand-3: var(--bd-color-primary-edge);
+    --vp-c-brand-soft: var(--bd-color-primary-light);
+
+    --vp-c-bg: var(--bd-color-bg);
+    --vp-c-bg-alt: var(--bd-color-surface);
+    --vp-c-bg-soft: var(--bd-color-surface);
+    --vp-c-bg-elv: var(--bd-color-bg);
+
+    --vp-c-text-1: var(--bd-color-text);
+    --vp-c-text-2: var(--bd-color-text-muted);
+    --vp-c-text-3: var(--bd-color-text-muted);
+
+    --vp-c-divider: var(--bd-color-border);
+    --vp-c-border: var(--bd-color-border-strong);
+    --vp-c-gutter: var(--bd-color-border);
+
+    --vp-font-family-base: var(--bd-font-main);
+
+    --vp-button-brand-bg: var(--bd-color-primary);
+    --vp-button-brand-hover-bg: var(--bd-color-primary-hover);
+    --vp-button-brand-active-bg: var(--bd-color-primary-edge);
+    --vp-button-brand-text: var(--bd-color-on-primary);
+    --vp-button-brand-hover-text: var(--bd-color-on-primary);
+    --vp-button-brand-active-text: var(--bd-color-on-primary);
+}
+
+.dark {
+    --vp-c-brand-3: var(--bd-color-primary-edge);
+}

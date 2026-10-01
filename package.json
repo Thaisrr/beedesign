@@ -5,6 +5,10 @@
   "type": "module",
   "license": "MIT",
   "author": "Thaïs Labouré",
+  "homepage": "https://thaisrr.github.io/beedesign/",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "vue",
     "vue3",
@@ -13,7 +17,7 @@
     "accessibility",
     "a11y"
   ],
-  "main": "./dist/beedesign.umd.cjs",
+  "main": "./dist/beedesign.js",
   "module": "./dist/beedesign.js",
   "types": "./dist/index.d.ts",
   "style": "./dist/beedesign.css",
@@ -37,7 +41,6 @@
     "type": "git",
     "url": "git+https://github.com/Thaisrr/beedesign.git"
   },
-  "homepage": "https://github.com/Thaisrr/beedesign#readme",
   "bugs": {
     "url": "https://github.com/Thaisrr/beedesign/issues"
   },

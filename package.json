@@ -1,6 +1,6 @@
 {
-  "name": "beedesign",
-  "version": "0.1.0",
+  "name": "@thaisrr/beedesign",
+  "version": "0.1.1",
   "description": "Une librairie de composants Vue 3 accessible par défaut, avec un thème entièrement surchargeable via des variables CSS.",
   "type": "module",
   "license": "MIT",

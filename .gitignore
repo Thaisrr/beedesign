@@ -1,8 +1,11 @@
 docs/.vitepress/cache
 docs/.vitepress/dist
 node_modules
-
+dist
 coverage
 *.tsbuildinfo
 docs/.vitepress/cache
 docs/.vitepress/dist
+
+*.d.ts
+*.tgz

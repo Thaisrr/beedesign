@@ -74,6 +74,12 @@ npm run test:coverage   # avec la couverture
 npm run typecheck       # types de la lib, des tests et de la doc
 ```
 
+## Compatibilité
+
+- Vue 3.5.2 ou plus récent.
+- Paquet ESM uniquement.
+- Les types supposent `moduleResolution: "bundler"`, la valeur par défaut des projets Vite et Nuxt. En `node16` ou `nodenext`, les types des composants peuvent ne pas se résoudre.
+
 ## Licence
 
 MIT

@@ -7,8 +7,9 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      insertTypesEntry: true,
+      // Seulement les sources : ni les fichiers de config ni les tests.
       include: ["src"],
+      exclude: ["src/env.d.ts"],
     }),
   ],
   resolve: {
@@ -19,13 +20,13 @@ export default defineConfig({
   build: {
     lib: {
       entry: fileURLToPath(new URL("./src/index.ts", import.meta.url)),
-      name: "Beedesign",
+      // ESM uniquement : Vite, Nuxt et Vitest consomment tous de l'ESM.
+      formats: ["es"],
       fileName: "beedesign",
     },
     rollupOptions: {
       external: ["vue"],
       output: {
-        globals: { vue: "Vue" },
         assetFileNames: "beedesign.[ext]",
       },
     },

@@ -20,9 +20,94 @@ jobs:
       - run: npm run typecheck
       - run: npm run test:coverage
       - run: npm run build
+      - run: npm run lint:package
       - run: npm run docs:build
       - name: Analyse Sonar
         if: github.event.pull_request.head.repo.fork != true
         uses: SonarSource/sonarqube-scan-action@v8.3.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  stage:
+    needs: check
+    # Seulement sur un push vers la branche par défaut, jamais sur une pull request.
+    if: github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    concurrency:
+      group: npm-stage
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write # s'authentifier auprès de npm par OIDC (trusted publishing)
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          # Pas de "registry-url" : il injecte un jeton vide qui empêche l'OIDC de npm.
+
+      - name: Installer un npm récent (11.15.0 minimum pour "npm stage")
+        run: |
+          npm install -g npm@^11.15.0
+          npm --version
+          # Un npm trop ancien répond "Unknown command" en sortant avec le code 0 :
+          # on vérifie donc le texte de l'aide, pas le code de sortie.
+          if ! npm stage --help 2>&1 | grep -q "npm stage publish"; then
+            echo "Cette version de npm ne connaît pas la commande 'npm stage'."
+            exit 1
+          fi
+
+      - name: Cette version est-elle déjà sur npm ?
+        id: npm
+        run: |
+          NAME="$(node -p "require('./package.json').name")"
+          VERSION="$(node -p "require('./package.json').version")"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          if OUT=$(npm view "$NAME@$VERSION" version 2>&1); then
+            echo "La version $VERSION est déjà sur npm : rien à mettre en attente."
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          elif echo "$OUT" | grep -q "E404"; then
+            echo "La version $VERSION n'est pas encore sur npm : mise en attente."
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Impossible d'interroger npm :"
+            echo "$OUT"
+            exit 1
+          fi
+
+      - name: Installer les dépendances
+        if: steps.npm.outputs.needed == 'true'
+        run: npm ci
+
+      - name: Construire et vérifier le paquet
+        if: steps.npm.outputs.needed == 'true'
+        run: |
+          npm run build
+          npm run lint:package
+
+      - name: Mettre la version en attente sur npm
+        if: steps.npm.outputs.needed == 'true'
+        env:
+          VERSION: ${{ steps.npm.outputs.version }}
+        run: |
+          # --provenance est explicite : "npm stage publish" ne l'active pas tout seul.
+          # Une version avec un tiret (1.0.0-beta.1) est une préversion : tag npm "next".
+          case "$VERSION" in
+            *-*) npm stage publish --provenance --tag next ;;
+            *) npm stage publish --provenance ;;
+          esac
+
+      - name: Expliquer comment approuver
+        if: steps.npm.outputs.needed == 'true'
+        env:
+          VERSION: ${{ steps.npm.outputs.version }}
+        run: |
+          {
+            echo "## Version $VERSION en attente d'approbation"
+            echo ""
+            echo "Elle n'est **pas encore publique**. Pour la publier, avec ta clé de sécurité :"
+            echo ""
+            echo "- sur npmjs.com : page du paquet, onglet **Staged Packages**, bouton **Approve** ;"
+            echo "- ou en terminal : \`npm stage list\` puis \`npm stage approve <stage-id>\`."
+          } >> "$GITHUB_STEP_SUMMARY"

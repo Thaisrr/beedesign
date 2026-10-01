@@ -1,6 +1,6 @@
 # Thème et tokens
 
-Tout le style de Beedesign passe par des variables CSS préfixées `--bd-`. Redéfinissez-les dans le CSS global de votre projet, après l'import de `beedesign/style.css` :
+Tout le style de Beedesign passe par des variables CSS préfixées `--bd-`. Redéfinissez-les dans le CSS global de votre projet, après l'import de `@thaisrr/beedesign/style.css` :
 
 ```css
 :root {

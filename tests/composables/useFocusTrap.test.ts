@@ -1,7 +1,7 @@
 import { flushPromises, mount } from "@vue/test-utils";
 import { defineComponent, h, ref } from "vue";
 import { describe, expect, it, vi } from "vitest";
-import { useFocusTrap } from "beedesign";
+import { useFocusTrap } from "@thaisrr/beedesign";
 
 interface HarnessProps {
     active: boolean;

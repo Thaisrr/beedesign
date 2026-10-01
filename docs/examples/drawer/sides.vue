@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { BeeButton, BeeDrawer, BeeFlex } from "beedesign";
+import { BeeButton, BeeDrawer, BeeFlex } from "@thaisrr/beedesign";
 
 type Side = "left" | "right" | "top" | "bottom";
 

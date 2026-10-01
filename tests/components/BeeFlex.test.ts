@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
-import { BeeFlex } from "beedesign";
+import { BeeFlex } from "@thaisrr/beedesign";
 
 const gapClasses = (classes: string[]) => classes.filter((c) => c.startsWith("bd-flex--gap-"));
 

@@ -1,7 +1,7 @@
 import { mount } from "@vue/test-utils";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { nextTick } from "vue";
-import { BeeAlertList, useAlert } from "beedesign";
+import { BeeAlertList, useAlert } from "@thaisrr/beedesign";
 
 const alerts = () => [...document.body.querySelectorAll<HTMLElement>(".bd-alert")];
 const messages = () =>

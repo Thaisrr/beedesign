@@ -12,8 +12,8 @@ import Responsive from "../examples/flex/responsive.vue";
 Un conteneur flexbox pour aligner et espacer des éléments, avec un passage automatique en colonne sur petit écran.
 
 ```ts
-import { BeeFlex } from "beedesign";
-import "beedesign/style.css";
+import { BeeFlex } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Utilisation

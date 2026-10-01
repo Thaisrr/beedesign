@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { BeeAlert } from "beedesign";
+import { BeeAlert } from "@thaisrr/beedesign";
 
 describe("BeeAlert", () => {
     it("affiche son contenu", () => {

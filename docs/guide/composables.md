@@ -3,7 +3,7 @@
 La logique d'accessibilité des composants superposés (modale, drawer) est extraite dans deux composables, exportés par la librairie. Vous pouvez les utiliser pour vos propres composants.
 
 ```ts
-import { useFocusTrap, useScrollLock } from "beedesign";
+import { useFocusTrap, useScrollLock } from "@thaisrr/beedesign";
 ```
 
 ## useScrollLock
@@ -27,7 +27,7 @@ Enferme le focus clavier dans un conteneur, gère Échap, et rend le focus à la
 ```vue
 <script setup lang="ts">
 import { ref } from "vue";
-import { useFocusTrap } from "beedesign";
+import { useFocusTrap } from "@thaisrr/beedesign";
 
 const open = ref(false);
 const panel = ref<HTMLElement | null>(null);

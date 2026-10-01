@@ -10,8 +10,8 @@ import Responsive from "../examples/grid/responsive.vue";
 Une grille de colonnes de largeur égale, qui passe sur une seule colonne sur petit écran.
 
 ```ts
-import { BeeGrid } from "beedesign";
-import "beedesign/style.css";
+import { BeeGrid } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Utilisation

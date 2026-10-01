@@ -13,7 +13,7 @@ import {
     BeeModal,
     BeeTag,
     useAlert,
-} from "beedesign";
+} from "@thaisrr/beedesign";
 
 /**
  * Lance axe-core sur la page de test et retourne les violations WCAG 2.x A et AA,

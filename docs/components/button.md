@@ -9,8 +9,8 @@ import States from "../examples/button/states.vue";
 Un bouton avec trois variantes, une forme arrondie, un état de chargement et un état désactivé.
 
 ```ts
-import { BeeButton } from "beedesign";
-import "beedesign/style.css";
+import { BeeButton } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Variantes

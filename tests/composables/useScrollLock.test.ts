@@ -1,7 +1,7 @@
 import { mount } from "@vue/test-utils";
 import { defineComponent, h, ref, type Ref } from "vue";
 import { describe, expect, it } from "vitest";
-import { useScrollLock } from "beedesign";
+import { useScrollLock } from "@thaisrr/beedesign";
 
 const Harness = defineComponent({
     props: { locked: { type: Boolean, default: false } },

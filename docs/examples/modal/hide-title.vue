@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { BeeButton, BeeModal } from "beedesign";
+import { BeeButton, BeeModal } from "@thaisrr/beedesign";
 
 const open = ref(false);
 </script>

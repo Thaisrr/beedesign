@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BeeTag } from "beedesign";
+import { BeeTag } from "@thaisrr/beedesign";
 </script>
 
 <template>

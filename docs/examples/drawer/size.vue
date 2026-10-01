@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { BeeButton, BeeDrawer, BeeFlex } from "beedesign";
+import { BeeButton, BeeDrawer, BeeFlex } from "@thaisrr/beedesign";
 
 const wide = ref(false);
 const short = ref(false);

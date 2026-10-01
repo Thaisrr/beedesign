@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BeeFlex } from "beedesign";
+import { BeeFlex } from "@thaisrr/beedesign";
 </script>
 
 <template>

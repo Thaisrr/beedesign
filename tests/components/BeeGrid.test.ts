@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
-import { BeeGrid } from "beedesign";
+import { BeeGrid } from "@thaisrr/beedesign";
 
 const gapClasses = (classes: string[]) => classes.filter((c) => c.startsWith("bd-grid--gap-"));
 

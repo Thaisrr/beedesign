@@ -1,7 +1,9 @@
 import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vitepress";
-
+const repository = process.env.GITHUB_REPOSITORY?.split("/")[1];
+const base = process.env.GITHUB_ACTIONS && repository ? `/${repository}/` : "/";
 export default defineConfig({
+    base,
     lang: "fr-FR",
     title: "Beedesign",
     description: "Composants Vue 3 accessibles et thémables par variables CSS.",
@@ -58,7 +60,7 @@ export default defineConfig({
     vite: {
         resolve: {
             alias: {
-                beedesign: fileURLToPath(new URL("../../src/index.ts", import.meta.url)),
+                "@thaisrr/beedesign": fileURLToPath(new URL("../../src/index.ts", import.meta.url)),
             },
         },
     },

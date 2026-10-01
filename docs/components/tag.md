@@ -9,8 +9,8 @@ import InCard from "../examples/tag/in-card.vue";
 Une petite étiquette pour qualifier un contenu : une catégorie, un mot-clé, un statut.
 
 ```ts
-import { BeeTag } from "beedesign";
-import "beedesign/style.css";
+import { BeeTag } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Utilisation

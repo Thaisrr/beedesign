@@ -10,8 +10,8 @@ import HideTitle from "../examples/drawer/hide-title.vue";
 Un panneau qui glisse depuis un bord de l'écran, pour des filtres, un menu ou un formulaire secondaire. Comme `BeeModal`, il bloque la page derrière lui, garde le focus clavier à l'intérieur et se ferme avec Échap.
 
 ```ts
-import { BeeDrawer } from "beedesign";
-import "beedesign/style.css";
+import { BeeDrawer } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Utilisation

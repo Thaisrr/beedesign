@@ -10,8 +10,8 @@ import WithActions from "../examples/card/with-actions.vue";
 Un conteneur pour regrouper un contenu : coins arrondis, bordure discrète, fond de surface, et une élévation optionnelle.
 
 ```ts
-import { BeeCard } from "beedesign";
-import "beedesign/style.css";
+import { BeeCard } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Utilisation

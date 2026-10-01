@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { useAlert } from "beedesign";
+import { useAlert } from "@thaisrr/beedesign";
 import { alertState } from "../../src/composables/useAlert";
 
 describe("useAlert", () => {

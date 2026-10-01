@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
-import { BeeButton } from "beedesign";
+import { BeeButton } from "@thaisrr/beedesign";
 
 describe("BeeButton", () => {
     it("affiche son contenu avec la variante primary par défaut", () => {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { BeeAlert, BeeButton } from "beedesign";
+import { BeeAlert, BeeButton } from "@thaisrr/beedesign";
 
 const visible = ref(true);
 </script>

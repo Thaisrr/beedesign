@@ -6,8 +6,8 @@ export default defineConfig({
     plugins: [vue()],
     resolve: {
         alias: {
-            // Les tests importent "beedesign" comme le ferait un utilisateur de la lib.
-            beedesign: fileURLToPath(new URL("./src/index.ts", import.meta.url)),
+            // Les tests importent "@thaisrr/beedesign" comme le ferait un utilisateur de la lib.
+            "@thaisrr/beedesign": fileURLToPath(new URL("./src/index.ts", import.meta.url)),
         },
     },
     test: {

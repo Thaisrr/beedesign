@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BeeCard, BeeGrid } from "beedesign";
+import { BeeCard, BeeGrid } from "@thaisrr/beedesign";
 </script>
 
 <template>

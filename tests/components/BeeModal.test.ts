@@ -1,6 +1,6 @@
 import { flushPromises, mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
-import { BeeModal } from "beedesign";
+import { BeeModal } from "@thaisrr/beedesign";
 
 const dialog = () => document.body.querySelector<HTMLElement>('[role="dialog"]');
 const closeButton = () => document.body.querySelector<HTMLButtonElement>(".bd-modal__close");

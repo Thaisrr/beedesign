@@ -10,14 +10,19 @@ thémable par variables CSS.
 ## Installation
 
 ```bash
-npm install beedesign
+npm install @thaisrr/beedesign
 ```
+
+## Documentation
+
+Retrouvez la documentation des composants ici :  
+<a href="https://thaisrr.github.io/beedesign/">https://thaisrr.github.io/beedesign/</a>
 
 ## Utilisation
 
 ```ts
-import { BeeButton } from "beedesign";
-import "beedesign/style.css";
+import { BeeButton } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ```vue
@@ -30,7 +35,7 @@ import "beedesign/style.css";
 
 Tous les composants s'appuient sur des variables CSS préfixées `--bd-`.
 Redéfinissez-les dans le CSS global de votre projet, après l'import de
-`beedesign/style.css` :
+`@thaisrr/beedesign/style.css` :
 
 ```css
 :root {

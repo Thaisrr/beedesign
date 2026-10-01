@@ -8,8 +8,8 @@ import Closable from "../examples/alert/closable.vue";
 Un message d'état affiché dans le flux de la page : succès, erreur, avertissement ou information. Pour des notifications temporaires qui s'empilent dans un coin de l'écran, voir [BeeAlertList](./alert-list).
 
 ```ts
-import { BeeAlert } from "beedesign";
-import "beedesign/style.css";
+import { BeeAlert } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Types

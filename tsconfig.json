@@ -14,7 +14,7 @@
     "noEmit": true,
     "paths": {
       "@/*": ["./src/*"],
-      "beedesign": ["./src/index.ts"]
+      "@thaisrr/beedesign": ["./src/index.ts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.vue", "*.config.ts"]

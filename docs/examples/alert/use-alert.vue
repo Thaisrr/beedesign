@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, ref } from "vue";
-import { BeeAlertList, BeeButton, BeeFlex, useAlert } from "beedesign";
-import type { AlertPosition } from "beedesign";
+import { BeeAlertList, BeeButton, BeeFlex, useAlert } from "@thaisrr/beedesign";
+import type { AlertPosition } from "@thaisrr/beedesign";
 
 const { success, error, info, warning, clear } = useAlert();
 

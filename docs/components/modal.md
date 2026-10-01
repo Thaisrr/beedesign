@@ -9,8 +9,8 @@ import HideTitle from "../examples/modal/hide-title.vue";
 Une boîte de dialogue centrée, qui bloque la page derrière elle. Le focus clavier reste à l'intérieur, Échap la ferme, et le focus revient sur le bouton qui l'a ouverte.
 
 ```ts
-import { BeeModal } from "beedesign";
-import "beedesign/style.css";
+import { BeeModal } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Utilisation

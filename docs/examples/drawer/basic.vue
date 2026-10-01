@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { BeeButton, BeeDrawer, BeeFlex } from "beedesign";
+import { BeeButton, BeeDrawer, BeeFlex } from "@thaisrr/beedesign";
 
 const open = ref(false);
 const filters = ["Débutants", "Gratuit", "En ligne", "Le week-end"];

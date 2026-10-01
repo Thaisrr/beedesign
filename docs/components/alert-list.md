@@ -7,8 +7,8 @@ import UseAlert from "../examples/alert/use-alert.vue";
 Des notifications temporaires qui s'empilent dans un coin de l'écran. On monte un `BeeAlertList` une seule fois dans l'application, puis on déclenche les alertes depuis n'importe où avec `useAlert()`.
 
 ```ts
-import { BeeAlertList, useAlert } from "beedesign";
-import "beedesign/style.css";
+import { BeeAlertList, useAlert } from "@thaisrr/beedesign";
+import "@thaisrr/beedesign/style.css";
 ```
 
 ## Mise en place

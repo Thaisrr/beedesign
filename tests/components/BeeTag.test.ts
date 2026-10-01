@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
-import { BeeTag } from "beedesign";
+import { BeeTag } from "@thaisrr/beedesign";
 
 describe("BeeTag", () => {
     it("affiche son libellé", () => {

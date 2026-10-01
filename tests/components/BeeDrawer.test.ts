@@ -1,6 +1,6 @@
 import { flushPromises, mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
-import { BeeDrawer } from "beedesign";
+import { BeeDrawer } from "@thaisrr/beedesign";
 
 const dialog = () => document.body.querySelector<HTMLElement>('[role="dialog"]');
 

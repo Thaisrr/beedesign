@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { useData } from "vitepress";
+import { computed, ref } from "vue";
+
+const { lang } = useData();
+const labels = computed(() =>
+    lang.value.startsWith("fr")
+        ? { preview: "Aperçu", code: "Code" }
+        : { preview: "Preview", code: "Code" },
+);
 
 const tab = ref<"preview" | "code">("preview");
 const uid = Math.random().toString(36).slice(2, 8);
@@ -17,7 +25,7 @@ const uid = Math.random().toString(36).slice(2, 8);
           :class="{ 'is-active': tab === 'preview' }"
           @click="tab = 'preview'"
       >
-        Aperçu
+        {{ labels.preview }}
       </button>
       <button
           :id="`${uid}-tab-code`"
@@ -28,7 +36,7 @@ const uid = Math.random().toString(36).slice(2, 8);
           :class="{ 'is-active': tab === 'code' }"
           @click="tab = 'code'"
       >
-        Code
+        {{ labels.code }}
       </button>
     </div>
 

@@ -52,6 +52,12 @@ describe("BeeAlert", () => {
             expect(wrapper.emitted("close")).toHaveLength(1);
         });
 
+        it("a un nom accessible en anglais par défaut", () => {
+            const wrapper = mount(BeeAlert, { props: { closable: true } });
+
+            expect(wrapper.find("button").text()).toContain("Close");
+        });
+
         it("a un nom accessible personnalisable", () => {
             const wrapper = mount(BeeAlert, { props: { closable: true, closeLabel: "Dismiss" } });
 

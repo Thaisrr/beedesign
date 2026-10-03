@@ -54,12 +54,12 @@ La prop `duration` ferme l'alerte au bout d'un délai en millisecondes, en émet
 
 ### Props
 
-| Nom          | Type                                          | Défaut     | Description                                             |
-| ------------ | --------------------------------------------- | ---------- | ------------------------------------------------------- |
-| `type`       | `"success" \| "error" \| "warning" \| "info"` | `"info"`   | Nature du message : couleur et icône.                   |
-| `closable`   | `boolean`                                     | `false`    | Affiche un bouton de fermeture.                         |
-| `duration`   | `number`                                      | `0`        | Fermeture automatique après ce délai en ms. 0 : jamais. |
-| `closeLabel` | `string`                                      | `"Fermer"` | Texte accessible du bouton de fermeture.                |
+| Nom          | Type                                          | Défaut    | Description                                             |
+| ------------ | --------------------------------------------- |-----------| ------------------------------------------------------- |
+| `type`       | `"success" \| "error" \| "warning" \| "info"` | `"info"`  | Nature du message : couleur et icône.                   |
+| `closable`   | `boolean`                                     | `false`   | Affiche un bouton de fermeture.                         |
+| `duration`   | `number`                                      | `0`       | Fermeture automatique après ce délai en ms. 0 : jamais. |
+| `closeLabel` | `string`                                      | `"Close"` | Texte accessible du bouton de fermeture.                |
 
 ### Événements
 

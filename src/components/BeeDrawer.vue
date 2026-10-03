@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
   side: "right",
   size: undefined,
   returnFocusEl: null,
-  closeLabel: "Fermer",
+  closeLabel: "Close",
   panelId: undefined,
   hideTitle: false,
 });

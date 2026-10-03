@@ -63,15 +63,15 @@ Avec `hide-title`, le titre n'est plus visible mais reste annoncé par les lecte
 
 ### Props
 
-| Nom             | Type                  | Défaut               | Description                                                      |
-| --------------- | --------------------- | -------------------- | ---------------------------------------------------------------- |
-| `title`         | `string`              |                      | Titre et nom accessible de la modale. Obligatoire.               |
-| `open`          | `boolean`             |                      | Ouverture, à utiliser avec `v-model:open`. Obligatoire.          |
-| `width`         | `string`              | `"min(90vw, 28rem)"` | Largeur CSS de la modale.                                        |
+| Nom             | Type                  | Défaut               | Description                                                     |
+| --------------- | --------------------- |----------------------|-----------------------------------------------------------------|
+| `title`         | `string`              |                      | Titre et nom accessible de la modale. Obligatoire.              |
+| `open`          | `boolean`             |                      | Ouverture, à utiliser avec `v-model:open`. Obligatoire.         |
+| `width`         | `string`              | `"min(90vw, 28rem)"` | Largeur CSS de la modale.                                       |
 | `hideTitle`     | `boolean`             | `false`              | Cache le titre visuellement, le garde pour les lecteurs d'écran. |
-| `closeLabel`    | `string`              | `"Fermer"`           | Texte accessible du bouton de fermeture.                         |
-| `returnFocusEl` | `HTMLElement \| null` | `null`               | Élément qui reprend le focus à la fermeture.                     |
-| `panelId`       | `string`              | généré               | Id du panneau, pour un `aria-controls` externe.                  |
+| `closeLabel`    | `string`              | `"Close"`            | Texte accessible du bouton de fermeture.                        |
+| `returnFocusEl` | `HTMLElement \| null` | `null`               | Élément qui reprend le focus à la fermeture.                    |
+| `panelId`       | `string`              | généré               | Id du panneau, pour un `aria-controls` externe.                 |
 
 ### Événements
 

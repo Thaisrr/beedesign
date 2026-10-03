@@ -23,7 +23,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   width: "min(90vw, 28rem)",
   returnFocusEl: null,
-  closeLabel: "Fermer",
+  closeLabel: "Close",
   panelId: undefined,
   hideTitle: false,
 });

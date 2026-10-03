@@ -64,10 +64,17 @@ describe("BeeModal", () => {
             expect(title.classList.contains("bd-modal__sr-only")).toBe(true);
         });
 
-        it("donne un nom accessible au bouton de fermeture, personnalisable", () => {
-            mountModal({ closeLabel: "Close" });
+        it("donne au bouton de fermeture un nom accessible en anglais par défaut", () => {
+            mountModal();
 
             expect(closeButton()?.textContent).toContain("Close");
+        });
+
+        it("permet de traduire le nom accessible du bouton de fermeture", () => {
+            mountModal({ closeLabel: "Fermer" });
+
+            expect(closeButton()?.textContent).toContain("Fermer");
+            expect(closeButton()?.textContent).not.toContain("Close");
         });
 
         it("utilise le panelId fourni", () => {

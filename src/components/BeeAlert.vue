@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
   type: "info",
   closable: false,
   duration: 0,
-  closeLabel: "Fermer",
+  closeLabel: "Close",
 });
 
 const emit = defineEmits<{

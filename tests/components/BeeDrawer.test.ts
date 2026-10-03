@@ -73,6 +73,23 @@ describe("BeeDrawer", () => {
         expect(title.textContent?.trim()).toBe("Filtres");
     });
 
+    describe("bouton de fermeture", () => {
+        const closeButton = () => document.body.querySelector<HTMLButtonElement>(".bd-drawer__close");
+
+        it("a un nom accessible en anglais par défaut", () => {
+            mountDrawer();
+
+            expect(closeButton()?.textContent).toContain("Close");
+        });
+
+        it("permet de traduire son nom accessible", () => {
+            mountDrawer({ closeLabel: "Fermer" });
+
+            expect(closeButton()?.textContent).toContain("Fermer");
+            expect(closeButton()?.textContent).not.toContain("Close");
+        });
+    });
+
     describe("fermeture", () => {
         it("émet update:open=false au clic sur le bouton de fermeture", () => {
             const wrapper = mountDrawer();

@@ -74,16 +74,16 @@ Avec `hide-title`, le titre n'est plus visible mais reste annoncé par les lecte
 
 ### Props
 
-| Nom             | Type                                     | Défaut     | Description                                                      |
-| --------------- | ---------------------------------------- | ---------- | ---------------------------------------------------------------- |
-| `title`         | `string`                                 |            | Titre et nom accessible du panneau. Obligatoire.                 |
-| `open`          | `boolean`                                |            | Ouverture, à utiliser avec `v-model:open`. Obligatoire.          |
-| `side`          | `"left" \| "right" \| "top" \| "bottom"` | `"right"`  | Bord depuis lequel le panneau apparaît.                          |
-| `size`          | `string`                                 |            | Largeur (`left`, `right`) ou hauteur maximale (`top`, `bottom`). |
-| `hideTitle`     | `boolean`                                | `false`    | Cache le titre visuellement, le garde pour les lecteurs d'écran. |
-| `closeLabel`    | `string`                                 | `"Fermer"` | Texte accessible du bouton de fermeture.                         |
-| `returnFocusEl` | `HTMLElement \| null`                    | `null`     | Élément qui reprend le focus à la fermeture.                     |
-| `panelId`       | `string`                                 | généré     | Id du panneau, pour un `aria-controls` externe.                  |
+| Nom             | Type                                     | Défaut    | Description                                                      |
+| --------------- | ---------------------------------------- |-----------| ---------------------------------------------------------------- |
+| `title`         | `string`                                 |           | Titre et nom accessible du panneau. Obligatoire.                 |
+| `open`          | `boolean`                                |           | Ouverture, à utiliser avec `v-model:open`. Obligatoire.          |
+| `side`          | `"left" \| "right" \| "top" \| "bottom"` | `"right"` | Bord depuis lequel le panneau apparaît.                          |
+| `size`          | `string`                                 |           | Largeur (`left`, `right`) ou hauteur maximale (`top`, `bottom`). |
+| `hideTitle`     | `boolean`                                | `false`   | Cache le titre visuellement, le garde pour les lecteurs d'écran. |
+| `closeLabel`    | `string`                                 | `"Close"` | Texte accessible du bouton de fermeture.                         |
+| `returnFocusEl` | `HTMLElement \| null`                    | `null`    | Élément qui reprend le focus à la fermeture.                     |
+| `panelId`       | `string`                                 | généré    | Id du panneau, pour un `aria-controls` externe.                  |
 
 ### Événements
 

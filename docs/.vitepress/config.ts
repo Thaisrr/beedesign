@@ -27,6 +27,7 @@ export default defineConfig({
                             { text: "Composables", link: "/guide/composables" },
                         ],
                     },
+                    { text: "A propos", link: "/guide/about"},
                     {
                         text: "Composants",
                         items: [
@@ -86,6 +87,7 @@ export default defineConfig({
                             { text: "Composables", link: "/en/guide/composables" },
                         ],
                     },
+                    { text: "About", link: "/en/guide/about"},
                     {
                         text: "Components",
                         items: [

@@ -67,14 +67,6 @@ error("Connection lost", { duration: 0 });
 
 ## With Nuxt
 
-`BeeAlertList` teleports into `body`. With server rendering, wrap it in `<ClientOnly>`:
-
-```vue
-<ClientOnly>
-  <BeeAlertList position="top-right" />
-</ClientOnly>
-```
-
 Only call the `useAlert()` methods on the client side (in an event handler, for example). The state is shared by the whole application, so an alert created during server rendering could be seen by several visitors.
 
 ## API

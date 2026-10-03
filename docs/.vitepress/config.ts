@@ -1,24 +1,22 @@
 import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vitepress";
 
-// Sur GitHub Pages, le site est servi sous https://<compte>.github.io/<dépôt>/.
-// En CI, le nom du dépôt est déduit automatiquement ; en local, le site reste à la racine.
 const repository = process.env.GITHUB_REPOSITORY?.split("/")[1];
 const base = process.env.GITHUB_ACTIONS && repository ? `/${repository}/` : "/";
 
 export default defineConfig({
     base,
     title: "Beedesign",
-
     locales: {
-        // Le français reste à la racine : les liens déjà partagés continuent de fonctionner.
         root: {
             label: "Français",
             lang: "fr-FR",
             description: "Composants Vue 3 accessibles et thémables par variables CSS.",
             themeConfig: {
                 nav: [
+                    {text: "Getting Started", link: '/guide/getting-started'},
                     { text: "Guide", link: "/guide/theming" },
+                    { text: "A propos", link: "/guide/about"},
                     { text: "Composants", link: "/components/button" },
                 ],
                 sidebar: [
@@ -32,15 +30,30 @@ export default defineConfig({
                     {
                         text: "Composants",
                         items: [
-                            { text: "BeeButton", link: "/components/button" },
-                            { text: "BeeCard", link: "/components/card" },
-                            { text: "BeeTag", link: "/components/tag" },
-                            { text: "BeeFlex", link: "/components/flex" },
-                            { text: "BeeGrid", link: "/components/grid" },
-                            { text: "BeeModal", link: "/components/modal" },
-                            { text: "BeeDrawer", link: "/components/drawer" },
-                            { text: "BeeAlert", link: "/components/alert" },
-                            { text: "BeeAlertList", link: "/components/alert-list" },
+                            {
+                                text: "UI",
+                                items: [
+                                    { text: "BeeAlert", link: "/components/alert" },
+                                    { text: "BeeButton", link: "/components/button" },
+                                    { text: "BeeCard", link: "/components/card" },
+                                    { text: "BeeTag", link: "/components/tag" },
+                                ]
+                            },
+                            {
+                                text: "Overlay",
+                                items: [
+                                    { text: "BeeAlertList", link: "/components/alert-list" },
+                                    { text: "BeeDrawer", link: "/components/drawer" },
+                                    { text: "BeeModal", link: "/components/modal" },
+                                ]
+                            },
+                            {
+                                text: "Mise en page",
+                                items: [
+                                    { text: "BeeFlex", link: "/components/flex" },
+                                    { text: "BeeGrid", link: "/components/grid" },
+                                ]
+                            },
                         ],
                     },
                 ],
@@ -61,12 +74,14 @@ export default defineConfig({
             themeConfig: {
                 nav: [
                     { text: "Guide", link: "/en/guide/theming" },
+                    { text: "About", link: "/en/guide/about"},
                     { text: "Components", link: "/en/components/button" },
                 ],
                 sidebar: [
                     {
                         text: "Guide",
                         items: [
+                            { text: "Getting Started", link: "/guide/getting-started" },
                             { text: "Theme and tokens", link: "/en/guide/theming" },
                             { text: "Composables", link: "/en/guide/composables" },
                         ],
@@ -74,15 +89,30 @@ export default defineConfig({
                     {
                         text: "Components",
                         items: [
-                            { text: "BeeButton", link: "/en/components/button" },
-                            { text: "BeeCard", link: "/en/components/card" },
-                            { text: "BeeTag", link: "/en/components/tag" },
-                            { text: "BeeFlex", link: "/en/components/flex" },
-                            { text: "BeeGrid", link: "/en/components/grid" },
-                            { text: "BeeModal", link: "/en/components/modal" },
-                            { text: "BeeDrawer", link: "/en/components/drawer" },
-                            { text: "BeeAlert", link: "/en/components/alert" },
-                            { text: "BeeAlertList", link: "/en/components/alert-list" },
+                            {
+                                text: "UI",
+                                items: [
+                                    { text: "BeeAlert", link: "/en/components/alert" },
+                                    { text: "BeeButton", link: "/en/components/button" },
+                                    { text: "BeeCard", link: "/en/components/card" },
+                                    { text: "BeeTag", link: "/en/components/tag" },
+                                ]
+                            },
+                            {
+                                text: "Overlay",
+                                items: [
+                                    { text: "BeeAlertList", link: "/en/components/alert-list" },
+                                    { text: "BeeDrawer", link: "/en/components/drawer" },
+                                    { text: "BeeModal", link: "/en/components/modal" },
+                                ]
+                            },
+                            {
+                                text: "Layout",
+                                items: [
+                                    { text: "BeeFlex", link: "/en/components/flex" },
+                                    { text: "BeeGrid", link: "/en/components/grid" },
+                                ]
+                            }
                         ],
                     },
                 ],
@@ -131,7 +161,6 @@ export default defineConfig({
     vite: {
         resolve: {
             alias: {
-                // Les exemples importent "@thaisrr/beedesign" comme le ferait un utilisateur de la lib.
                 "@thaisrr/beedesign": fileURLToPath(new URL("../../src/index.ts", import.meta.url)),
             },
         },

@@ -67,14 +67,6 @@ error("Connexion perdue", { duration: 0 });
 
 ## Avec Nuxt
 
-`BeeAlertList` se téléporte dans `body`. En rendu serveur, enveloppez-le dans `<ClientOnly>` :
-
-```vue
-<ClientOnly>
-  <BeeAlertList position="top-right" />
-</ClientOnly>
-```
-
 N'appelez les méthodes de `useAlert()` que côté client (dans un gestionnaire d'événement, par exemple). L'état est partagé par toute l'application, une alerte créée pendant le rendu serveur pourrait être vue par plusieurs visiteurs.
 
 ## API

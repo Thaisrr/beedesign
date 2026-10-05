@@ -81,7 +81,7 @@ While loading, the button keeps its width, shows a spinner and ignores clicks. I
 
 ### CSS variables used
 
-`--bd-color-primary`, `--bd-color-primary-hover`, `--bd-color-primary-edge`, `--bd-color-on-primary`, `--bd-color-primary-dark`, `--bd-color-primary-light`, `--bd-color-border`, `--bd-color-text-muted`, `--bd-color-focus`, `--bd-font-main`, `--bd-radius-md`, `--bd-radius-full`, `--bd-space-sm`, `--bd-transition-fast`.
+`--bd-color-primary`, `--bd-color-primary-hover`, `--bd-color-primary-edge`, `--bd-color-on-primary`, `--bd-color-primary-dark`, `--bd-color-primary-light`, `--bd-color-border`, `--bd-color-text-muted`, `--bd-color-focus`, `--bd-font-main`, `--bd-font-size-md`, `--bd-radius-full`, `--bd-space-sm`, `--bd-space-md`, `--bd-control-height`, `--bd-border-width-strong`, `--bd-focus-ring-width`, `--bd-focus-ring-offset`, `--bd-button-edge`, `--bd-transition-fast`.
 
 ## Accessibility
 

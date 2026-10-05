@@ -75,7 +75,7 @@ La prop `duration` ferme l'alerte au bout d'un délai en millisecondes, en émet
 
 ### Variables CSS utilisées
 
-`--bd-color-success`, `--bd-color-error`, `--bd-color-warning`, `--bd-color-info`, `--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-color-focus`, `--bd-font-main`, `--bd-font-size-md`, `--bd-radius-md`, `--bd-radius-full`, `--bd-space-sm`, `--bd-transition-fast`.
+`--bd-color-success`, `--bd-color-error`, `--bd-color-warning`, `--bd-color-info`, `--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-color-focus`, `--bd-font-main`, `--bd-font-size-md`, `--bd-radius-md`, `--bd-radius-full`, `--bd-space-sm`, `--bd-transition-fast`, `--bd-space-md`, `bd-border-width`, `--bd-alert-strip-width`, `--bd-focus-ring-width`, `--bd-focus-ring-offset`.
 
 ## Accessibilité
 

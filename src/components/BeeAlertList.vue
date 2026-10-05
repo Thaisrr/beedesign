@@ -38,7 +38,7 @@ const { dismiss } = useAlert();
 
 <style scoped>
 .bd-alert-list {
-  --bd-alert-from: translateY(1rem);
+  --bd-alert-from: translateY(var(--bd-space-md));
 
   position: fixed;
   z-index: var(--bd-z-alert);
@@ -46,7 +46,7 @@ const { dismiss } = useAlert();
   flex-direction: column;
   gap: var(--bd-space-sm);
   box-sizing: border-box;
-  width: min(100vw, 26rem);
+  width: min(100vw, 416px);
   padding: var(--bd-space-md);
   /* La zone ne bloque pas les clics sur la page, seules les alertes les reçoivent. */
   pointer-events: none;
@@ -60,7 +60,7 @@ const { dismiss } = useAlert();
 .bd-alert-list--top-center,
 .bd-alert-list--top-right {
   top: 0;
-  --bd-alert-from: translateY(-1rem);
+  --bd-alert-from: translateY(calc(var(--bd-space-md) * -1));;
 }
 
 .bd-alert-list--bottom-left,
@@ -72,13 +72,13 @@ const { dismiss } = useAlert();
 .bd-alert-list--top-left,
 .bd-alert-list--bottom-left {
   left: 0;
-  --bd-alert-from: translateX(-1rem);
+  --bd-alert-from: translateX(calc(var(--bd-space-md) * -1));
 }
 
 .bd-alert-list--top-right,
 .bd-alert-list--bottom-right {
   right: 0;
-  --bd-alert-from: translateX(1rem);
+  --bd-alert-from: translateX(var(--bd-space-md));
 }
 
 .bd-alert-list--top-center,

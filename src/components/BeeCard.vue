@@ -22,7 +22,7 @@ withDefaults(defineProps<Props>(), {
 <style scoped>
 .bd-card {
   box-sizing: border-box;
-  border: 1px solid var(--bd-color-border);
+  border: var(--bd-border-width) solid var(--bd-color-border);
   border-radius: var(--bd-radius-md);
   background: var(--bd-color-surface);
   color: var(--bd-color-text);

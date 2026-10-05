@@ -89,4 +89,4 @@ A card combines well with the other components of the library.
 
 ### CSS variables used
 
-`--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-font-main`, `--bd-radius-md`, `--bd-space-md`, `--bd-space-lg`, `--bd-shadow-1`, `--bd-shadow-2`, `--bd-shadow-3`.
+`--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-font-main`, `--bd-radius-md`, `--bd-space-md`, `--bd-space-lg`, `--bd-shadow-1`, `--bd-shadow-2`, `--bd-shadow-3`, `--bd-border-width`.

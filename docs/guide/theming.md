@@ -46,4 +46,34 @@ Si vous changez `--bd-color-primary`, redéfinissez aussi sa version sombre :
 | `--bd-color-border-strong` | Bordures de champs et séparateurs marqués. |
 | `--bd-color-focus`         | Anneau de focus.                           |
 
+## Tailles, bordures et focus
+
+Ces variables sont en pixels. Seules les tailles de police sont en `rem`, pour suivre le réglage de taille de texte du navigateur.
+
+| Token                      | Par défaut      | Rôle                                                   |
+| -------------------------- | --------------- | ------------------------------------------------------ |
+| `--bd-space-sm`            | 8 px            | Petit espacement.                                      |
+| `--bd-space-md`            | 16 px           | Espacement moyen.                                      |
+| `--bd-space-lg`            | 32 px           | Grand espacement.                                      |
+| `--bd-control-height`      | 44 px           | Hauteur minimale d'un contrôle (le bouton).            |
+| `--bd-close-size`          | 36 px           | Taille des boutons de fermeture (modale, drawer).      |
+| `--bd-overlay-width`       | 448 px          | Largeur par défaut de la modale et du drawer.          |
+| `--bd-border-width`        | 1 px            | Bordure des cartes, tags, alertes, modale et drawer.   |
+| `--bd-border-width-strong` | 2 px            | Bordure des boutons.                                   |
+| `--bd-alert-stripe-width`  | 4 px            | Bande colorée à gauche d'une alerte.                   |
+| `--bd-focus-ring-width`    | 3 px            | Épaisseur de l'anneau de focus.                        |
+| `--bd-focus-ring-offset`   | 2 px            | Écart entre l'élément et son anneau de focus.          |
+| `--bd-button-edge`         | 3 px            | Hauteur de l'arête sous le bouton principal.           |
+
+```css
+:root {
+  --bd-control-height: 48px;
+  --bd-focus-ring-width: 4px;
+}
+```
+
+::: warning Accessibilité
+Réduire ces valeurs peut rendre l'interface moins utilisable. WCAG 2.2 demande des cibles d'au moins 24 px (critère 2.5.8) et un indicateur de focus visible (2.4.7). Beedesign vise 44 px pour les boutons. En dessous de 44 px pour `--bd-control-height`, ou de 2 px pour `--bd-focus-ring-width`, testez l'interface au clavier et sur un écran tactile.
+:::
+
 La liste complète est dans `src/styles/tokens.css`.

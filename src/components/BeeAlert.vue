@@ -145,9 +145,9 @@ onBeforeUnmount(() => {
   box-sizing: border-box;
   /* Reste cliquable quand l'alerte est placée dans un BeeAlertList. */
   pointer-events: auto;
-  padding: 0.75rem 0.75rem 0.75rem 1rem;
-  border: 1px solid color-mix(in srgb, var(--bd-alert-color) 35%, var(--bd-color-border));
-  border-left: 4px solid var(--bd-alert-color);
+  padding: 12px 12px 12px var(--bd-space-md);
+  border: var(--bd-border-width) solid color-mix(in srgb, var(--bd-alert-color) 35%, var(--bd-color-border));
+  border-left: var(--bd-alert-stripe-width) solid var(--bd-alert-color);
   border-radius: var(--bd-radius-md);
   background: color-mix(in srgb, var(--bd-alert-color) 10%, var(--bd-color-surface));
   color: var(--bd-color-text);
@@ -174,7 +174,7 @@ onBeforeUnmount(() => {
 
 .bd-alert__icon {
   flex: none;
-  margin-top: 0.1rem;
+  margin-top: 2px;
   color: var(--bd-alert-color);
 }
 
@@ -188,9 +188,9 @@ onBeforeUnmount(() => {
   flex: none;
   display: grid;
   place-items: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  margin: -0.2rem -0.2rem -0.2rem 0;
+  width: 28px;
+  height: 28px;
+  margin: -3px -3px -3px 0;
   padding: 0;
   border: 0;
   border-radius: var(--bd-radius-full);
@@ -205,8 +205,8 @@ onBeforeUnmount(() => {
 }
 
 .bd-alert__close:focus-visible {
-  outline: 3px solid var(--bd-color-focus);
-  outline-offset: 2px;
+  outline: var(--bd-focus-ring-width) solid var(--bd-color-focus);
+  outline-offset: var(--bd-focus-ring-offset);
 }
 
 .bd-alert__sr-only {

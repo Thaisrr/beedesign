@@ -44,7 +44,7 @@ La prop `side` choisit le bord : `right` (par défaut), `left`, `top` ou `bottom
 
 ## Taille
 
-La prop `size` règle la largeur pour `left` et `right`, et la hauteur maximale pour `top` et `bottom`. Elle accepte n'importe quelle longueur CSS. Sans `size`, la largeur est `min(90vw, 28rem)` et la hauteur maximale `60vh`.
+La prop `size` règle la largeur pour `left` et `right`, et la hauteur maximale pour `top` et `bottom`. Elle accepte n'importe quelle longueur CSS. Sans `size`, la largeur est `min(90vw, var(--bd-overlay-width))` (448 px par défaut) et la hauteur maximale `60vh`.
 
 <Demo>
   <Size />
@@ -99,7 +99,7 @@ Avec `hide-title`, le titre n'est plus visible mais reste annoncé par les lecte
 
 ### Variables CSS utilisées
 
-`--bd-color-overlay`, `--bd-z-modal`, `--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-color-primary-light`, `--bd-color-primary-medium`, `--bd-color-primary-dark`, `--bd-color-focus`, `--bd-font-main`, `--bd-font-title`, `--bd-font-size-lg`, `--bd-radius-full`, `--bd-space-md`, `--bd-shadow-3`, `--bd-transition-fast`, `--bd-transition-base`.
+`--bd-color-overlay`, `--bd-z-modal`, `--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-color-primary-light`, `--bd-color-primary-medium`, `--bd-color-primary-dark`, `--bd-color-focus`, `--bd-font-main`, `--bd-font-title`, `--bd-font-size-lg`, `--bd-radius-full`, `--bd-space-md`, `--bd-shadow-3`, `--bd-transition-fast`, `--bd-transition-base`, `--bd-border-width`, `--bd-close-size`, `--bd-overlay-width`, `--bd-focus-ring-width`, `--bd-focus-ring-width`, `--bd-focus-ring-offset`.
 
 ## Accessibilité
 

@@ -21,7 +21,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  width: "min(90vw, 28rem)",
+  width: "min(90vw, var(--bd-overlay-width)",
   returnFocusEl: null,
   closeLabel: "Close",
   panelId: undefined,
@@ -115,12 +115,12 @@ useFocusTrap({
   margin: auto;
   height: fit-content;
   max-width: 100vw;
-  max-height: min(80vh, 40rem);
+  max-height: min(80vh, 640px);
   overflow-y: auto;
   overscroll-behavior: contain;
   box-sizing: border-box;
   padding: calc(var(--bd-space-md) * 1.5);
-  border: 1px solid var(--bd-color-border);
+  border: var(--bd-border-width) solid var(--bd-color-border);
   border-radius: var(--bd-radius-md);
   background: var(--bd-color-surface);
   color: var(--bd-color-text);
@@ -156,8 +156,8 @@ useFocusTrap({
   flex: none;
   display: grid;
   place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--bd-close-size);
+  height: var(--bd-close-size);
   padding: 0;
   border: 0;
   border-radius: var(--bd-radius-full);
@@ -172,8 +172,8 @@ useFocusTrap({
 }
 
 .bd-modal__close:focus-visible {
-  outline: 3px solid var(--bd-color-focus);
-  outline-offset: 2px;
+  outline: var(--bd-focus-ring-width) solid var(--bd-color-focus);
+  outline-offset: var(--bd-focus-ring-offset);
 }
 
 .bd-modal__sr-only {

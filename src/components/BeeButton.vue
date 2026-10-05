@@ -41,10 +41,10 @@ defineEmits<{ (e: "click", event: MouseEvent): void }>();
   align-items: center;
   justify-content: center;
   gap: var(--bd-space-sm);
-  min-height: 2.75rem; /* cible tactile de 44px */
-  padding: 0 1.5rem;
+  min-height: var(--bd-control-height); /* cible tactile de 44px */
+  padding: 0 calc(var(--bd-space-md) * 1.5);
   border-radius: var(--bd-radius-sm);
-  border: 2px solid transparent;
+  border: var(--bd-border-width-strong) solid transparent;
   font-family: var(--bd-font-main);
   font-size: var(--bd-font-size-md);
   font-weight: 600;
@@ -57,8 +57,8 @@ defineEmits<{ (e: "click", event: MouseEvent): void }>();
 }
 
 .bd-button:focus-visible {
-  outline: 3px solid var(--bd-color-focus);
-  outline-offset: 3px;
+  outline: var(--bd-focus-ring-width) solid var(--bd-color-focus);
+  outline-offset: var(--bd-focus-ring-offset);
 }
 
 .bd-button.bd-button--rounded {
@@ -78,7 +78,7 @@ defineEmits<{ (e: "click", event: MouseEvent): void }>();
 }
 
 .bd-button--primary:not(:disabled):active {
-  transform: translateY(3px);
+  transform: translateY(var(--bd-button-edge));
 }
 
 .bd-button--secondary {
@@ -137,10 +137,10 @@ defineEmits<{ (e: "click", event: MouseEvent): void }>();
 
 .bd-button__spinner {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: 2px solid currentColor;
+  border: var(--bd-border-width-strong) solid currentColor;
   border-right-color: transparent;
   animation: bd-spin 0.6s linear infinite;
 }

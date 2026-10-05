@@ -69,4 +69,4 @@ La prop `rounded` passe le tag en forme de pilule (`--bd-radius-full`).
 
 ### Variables CSS utilisées
 
-`--bd-color-primary-light`, `--bd-color-primary-medium`, `--bd-color-primary-dark`, `--bd-font-main`, `--bd-font-size-sm`, `--bd-radius-sm`, `--bd-radius-full`.
+`--bd-color-primary-light`, `--bd-color-primary-medium`, `--bd-color-primary-dark`, `--bd-font-main`, `--bd-font-size-sm`, `--bd-radius-sm`, `--bd-radius-full`. `--bd-border-width`,

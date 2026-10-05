@@ -136,17 +136,17 @@ useFocusTrap({
 .bd-drawer--left {
   top: 0;
   bottom: 0;
-  width: min(90vw, 28rem);
+  width: min(90vw, var(--bd-overlay-width));
 }
 
 .bd-drawer--right {
   right: 0;
-  border-left-width: 1px;
+  border-left-width:  var(--bd-border-width);
 }
 
 .bd-drawer--left {
   left: 0;
-  border-right-width: 1px;
+  border-right-width: var(--bd-border-width);
 }
 
 /* Haut et bas : pleine largeur, hauteur limitée. */
@@ -159,12 +159,12 @@ useFocusTrap({
 
 .bd-drawer--top {
   top: 0;
-  border-bottom-width: 1px;
+  border-bottom-width:  var(--bd-border-width);
 }
 
 .bd-drawer--bottom {
   bottom: 0;
-  border-top-width: 1px;
+  border-top-width:  var(--bd-border-width);
 }
 
 .bd-drawer__head {
@@ -200,8 +200,8 @@ useFocusTrap({
   flex: none;
   display: grid;
   place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--bd-close-size);
+  height: var(--bd-close-size);
   padding: 0;
   border: 0;
   border-radius: var(--bd-radius-full);
@@ -216,8 +216,8 @@ useFocusTrap({
 }
 
 .bd-drawer__close:focus-visible {
-  outline: 3px solid var(--bd-color-focus);
-  outline-offset: 2px;
+  outline: var(--bd-focus-ring-width) solid var(--bd-color-focus);
+  outline-offset: var(--bd-focus-ring-offset);
 }
 
 .bd-drawer__sr-only {

@@ -29,7 +29,7 @@ Opening is controlled with `v-model:open`. The title is required: it appears in 
 
 ## Width
 
-The `width` prop accepts any CSS width. The default value, `min(90vw, 28rem)`, keeps a margin on mobile.
+The `width` prop accepts any CSS width. The default value, `min(90vw, var(--bd-overlay-width))` (448 px by default), keeps a margin on mobile.
 
 <Demo>
   <Width />
@@ -64,10 +64,10 @@ On closing, focus automatically returns to the element that had it on opening, u
 ### Props
 
 | Name            | Type                  | Default              | Description                                            |
-| --------------- | --------------------- | -------------------- | ------------------------------------------------------ |
+| --------------- | --------------------- |----------------------| ------------------------------------------------------ |
 | `title`         | `string`              |                      | Title and accessible name of the modal. Required.      |
 | `open`          | `boolean`             |                      | Open state, to use with `v-model:open`. Required.      |
-| `width`         | `string`              | `"min(90vw, 28rem)"` | CSS width of the modal.                                |
+| `width`         | `string`              | `"min(90vw, 418px)"` | CSS width of the modal.                                |
 | `hideTitle`     | `boolean`             | `false`              | Hides the title visually, keeps it for screen readers. |
 | `closeLabel`    | `string`              | `"Close"`            | Accessible text of the close button.                   |
 | `returnFocusEl` | `HTMLElement \| null` | `null`               | Element that gets the focus back on closing.           |
@@ -89,7 +89,7 @@ To localize it, pass the text of your language, for example `close-label="Fermer
 
 ### CSS variables used
 
-`--bd-color-overlay`, `--bd-z-modal`, `--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-color-primary-light`, `--bd-color-primary-medium`, `--bd-color-primary-dark`, `--bd-color-focus`, `--bd-font-main`, `--bd-font-title`, `--bd-font-size-lg`, `--bd-radius-md`, `--bd-radius-full`, `--bd-space-md`, `--bd-shadow-3`, `--bd-transition-fast`, `--bd-transition-base`.
+`--bd-color-overlay`, `--bd-z-modal`, `--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-color-primary-light`, `--bd-color-primary-medium`, `--bd-color-primary-dark`, `--bd-color-focus`, `--bd-font-main`, `--bd-font-title`, `--bd-font-size-lg`, `--bd-radius-md`, `--bd-radius-full`, `--bd-space-md`, `--bd-shadow-3`, `--bd-transition-fast`, `--bd-transition-base`, `--bd-border-width`, `--bd-close-size`, `--bd-overlay-width`, `--bd-focus-ring-width`, `--bd-focus-ring-width`, `--bd-focus-ring-offset`.
 
 ## Accessibility
 

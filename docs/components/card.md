@@ -89,4 +89,4 @@ Une carte se combine avec les autres composants de la librairie.
 
 ### Variables CSS utilisées
 
-`--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-font-main`, `--bd-radius-md`, `--bd-space-md`, `--bd-space-lg`, `--bd-shadow-1`, `--bd-shadow-2`, `--bd-shadow-3`.
+`--bd-color-surface`, `--bd-color-border`, `--bd-color-text`, `--bd-font-main`, `--bd-radius-md`, `--bd-space-md`, `--bd-space-lg`, `--bd-shadow-1`, `--bd-shadow-2`, `--bd-shadow-3`, `--bd-border-width`.

@@ -46,4 +46,34 @@ If you change `--bd-color-primary`, also redefine its dark version:
 | `--bd-color-border-strong` | Field borders and strong separators. |
 | `--bd-color-focus`         | Focus ring.                          |
 
+## Sizes, borders and focus
+
+These variables are in pixels. Only font sizes use `rem`, so that they follow the browser's text size setting.
+
+| Token                      | Default | Role                                               |
+| -------------------------- | ------- | -------------------------------------------------- |
+| `--bd-space-sm`            | 8 px    | Small spacing.                                     |
+| `--bd-space-md`            | 16 px   | Medium spacing.                                    |
+| `--bd-space-lg`            | 32 px   | Large spacing.                                     |
+| `--bd-control-height`      | 44 px   | Minimum height of a control (the button).          |
+| `--bd-close-size`          | 36 px   | Size of the close buttons (modal, drawer).         |
+| `--bd-overlay-width`       | 448 px  | Default width of the modal and the drawer.         |
+| `--bd-border-width`        | 1 px    | Border of cards, tags, alerts, modal and drawer.   |
+| `--bd-border-width-strong` | 2 px    | Border of buttons.                                 |
+| `--bd-alert-stripe-width`  | 4 px    | Colored stripe on the left of an alert.            |
+| `--bd-focus-ring-width`    | 3 px    | Thickness of the focus ring.                       |
+| `--bd-focus-ring-offset`   | 2 px    | Gap between the element and its focus ring.        |
+| `--bd-button-edge`         | 3 px    | Height of the edge under the primary button.       |
+
+```css
+:root {
+  --bd-control-height: 48px;
+  --bd-focus-ring-width: 4px;
+}
+```
+
+::: warning Accessibility
+Reducing these values can make the interface harder to use. WCAG 2.2 asks for targets of at least 24 px (criterion 2.5.8) and a visible focus indicator (2.4.7). Beedesign aims for 44 px on buttons. Below 44 px for `--bd-control-height`, or below 2 px for `--bd-focus-ring-width`, test the interface with a keyboard and on a touch screen.
+:::
+
 The full list is in `src/styles/tokens.css`.

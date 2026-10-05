@@ -19,8 +19,8 @@ withDefaults(defineProps<Props>(), {
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 0.2rem 0.65rem;
-  border: 1px solid var(--bd-color-primary-medium);
+  padding: 3px 10px;
+  border: var(--bd-border-width) solid var(--bd-color-primary-medium);
   border-radius: var(--bd-radius-sm);
   background: var(--bd-color-primary-light);
   color: var(--bd-color-primary-dark);

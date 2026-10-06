@@ -18,6 +18,8 @@ npm install @thaisrr/beedesign
 Retrouvez la documentation des composants ici :  
 <a href="https://thaisrr.github.io/beedesign/">https://thaisrr.github.io/beedesign/</a>
 
+Vous pouvez également créer votre thème avec [BeePalette](https://thaisrr.github.io/bee-palette)
+
 ## Utilisation
 
 ```ts

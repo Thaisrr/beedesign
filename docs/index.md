@@ -10,6 +10,6 @@ hero:
         text: Premiers pas
         link: /guide/getting-started
       - theme: alt
-        text: Voir les composants
-        link: /components/button
+        text: Créer son thème avec BeePalette
+        link: https://thaisrr.github.io/bee-palette/
 ---

@@ -15,6 +15,7 @@ Beedesign started from my own needs: a design system I had built for my portfoli
 - reduced animations when the system asks for them.
 
 **Easy to theme.** Everything goes through CSS variables prefixed with `--bd-`. No configuration file or extra build tool: you change variables, and dark mode follows. See [Theme and tokens](/en/guide/theming).
+You can also easily create a custom theme with (BeePalette)[https://thaisrr.github.io/bee-palette/]
 
 **Small and readable.** Nine components and three composables, with no dependency other than Vue. About 5 kB of JavaScript and 3 kB of CSS once compressed. Each component has a short, typed API, so the code stays easy to read, review and fix.
 

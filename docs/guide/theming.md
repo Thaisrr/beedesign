@@ -12,6 +12,10 @@ Tout le style de Beedesign passe par des variables CSS préfixées `--bd-`. Red�
 }
 ```
 
+## BeePalette
+
+BeePalette est un site web qui vous permet de customiser facilement votre thème ! [https://thaisrr.github.io/bee-palette/](https://thaisrr.github.io/bee-palette/)
+
 ## Mode sombre
 
 Ajoutez la classe `dark` ou l'attribut `data-theme="dark"` sur `<html>` (ou n'importe quel parent). Les tokens de couleur s'inversent, le violet et l'ambre sont éclaircis pour rester lisibles.

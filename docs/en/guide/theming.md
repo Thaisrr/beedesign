@@ -12,6 +12,10 @@ All of Beedesign's styling goes through CSS variables prefixed with `--bd-`. Red
 }
 ```
 
+## BeePalette
+
+BeePalette is a website that enable you to create a theme for BeeDesign, easily : [https://thaisrr.github.io/bee-palette/](https://thaisrr.github.io/bee-palette/)
+
 ## Dark mode
 
 Add the `dark` class or the `data-theme="dark"` attribute on `<html>` (or on any parent). The color tokens flip, and the violet and amber are lightened to stay readable.

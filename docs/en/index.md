@@ -10,6 +10,6 @@ hero:
         text: Getting started
         link: /en/guide/getting-started
       - theme: alt
-        text: Browse the components
-        link: /en/components/button
+        text: Create theme with BeePalette
+        link: https://thaisrr.github.io/bee-palette
 ---
